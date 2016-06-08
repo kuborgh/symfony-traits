@@ -1,7 +1,7 @@
 {
   "name": "kuborgh/symfony-traits",
   "type": "library",
-  "description": "A collection of tratis to inject symfony services",
+  "description": "A collection of traits to inject symfony services",
   "keywords": [
     "library",
     "symfony",
