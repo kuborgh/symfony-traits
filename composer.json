@@ -1,0 +1,25 @@
+{
+  "name": "kuborgh/symfony-traits",
+  "type": "library",
+  "description": "A collection of tratis to inject symfony services",
+  "keywords": [
+    "library",
+    "symfony",
+    "dependency-injection",
+    "trait"
+  ],
+  "homepage": "https://github.com/kuborgh/symfony-traits",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hannes Giesenow",
+      "email": "hgiesenow@kuborgh.de"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "Kuborgh\\SymfonyTraits": ""
+    }
+  },
+  "target-dir": "Kuborgh/SymfonyTraits"
+}
