@@ -43,7 +43,7 @@ trait LoggerTrait
     }
 
     /**
-     * Conveniance wrapper
+     * Convenience wrapper
      *
      * @param string $message
      * @param array  $context
@@ -51,6 +51,50 @@ trait LoggerTrait
     protected function logError($message, array $context = array())
     {
         $this->getLogger()->error($message, $context);
+    }
+
+    /**
+     * Convenience wrapper
+     *
+     * @param string $message
+     * @param array  $context
+     */
+    protected function logWarning($message, array $context = array())
+    {
+        $this->getLogger()->warning($message, $context);
+    }
+
+    /**
+     * Convenience wrapper
+     *
+     * @param string $message
+     * @param array  $context
+     */
+    protected function logNotice($message, array $context = array())
+    {
+        $this->getLogger()->notice($message, $context);
+    }
+
+    /**
+     * Convenience wrapper
+     *
+     * @param string $message
+     * @param array  $context
+     */
+    protected function logInfo($message, array $context = array())
+    {
+        $this->getLogger()->info($message, $context);
+    }
+
+    /**
+     * Convenience wrapper
+     *
+     * @param string $message
+     * @param array  $context
+     */
+    protected function logDebug($message, array $context = array())
+    {
+        $this->getLogger()->debug($message, $context);
     }
 
     /**
@@ -63,7 +107,9 @@ trait LoggerTrait
     protected function logContextFromException(\Exception $exc)
     {
         return array(
-            'exception' => sprintf('(%s) %s', get_class($exc), $exc->getMessage()),
+            'ExceptionClass'   => get_class($exc),
+            'ExceptionMessage' => $exc->getMessage(),
+            'ExceptionCode'    => $exc->getCode(),
         );
     }
 }
